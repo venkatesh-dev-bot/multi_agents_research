@@ -53,7 +53,7 @@ OPENAI_API_KEY=your_openai_key
 ### Running the Streamlit Interface
 
 ```bash
-streamlit run run.py
+python run.py
 ```
 
 This will open the web interface where you can:

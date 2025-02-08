@@ -1,6 +1,8 @@
 """Main module for the Market Research System."""
 
-from .agents.market_agent import get_agent_response
+from .agents.market_agent import get_agent_response as market_agent_response
+from .agents.research_agent import get_agent_response as research_agent_response
+from .agents.resource_agent import get_agent_response as resource_agent_response
 from .agents import (
     create_research_agent,
     create_market_agent,
@@ -28,13 +30,13 @@ class MarketResearchSystem:
             dict: Analysis results including research, market, and resource data
         """
         research_prompt = f"Analyze the company {company_name} in the {industry} industry"
-        research_response = get_agent_response(self.research_agent, research_prompt)
+        research_response = research_agent_response(self.research_agent, research_prompt)
         
         market_prompt = f"Generate AI/ML use cases for {company_name} in {industry}"
-        market_response = get_agent_response(self.market_agent, market_prompt)
+        market_response = market_agent_response(self.market_agent, market_prompt)
         
         resource_prompt = f"Find implementation resources for {company_name} in {industry}"
-        resource_response = get_agent_response(self.resource_agent, resource_prompt)
+        resource_response = resource_agent_response(self.resource_agent, resource_prompt)
 
         return {
             "industry_analysis": research_response,

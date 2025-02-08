@@ -1,0 +1,15 @@
+langchain==0.3.17
+langchain-core==0.3.33
+langchain-openai==0.3.3
+langchain-community==0.3.16
+langchain-experimental
+openai
+streamlit
+python-dotenv
+duckduckgo-search
+requests
+pydantic
+typing-extensions
+aiohttp
+colorlog
+

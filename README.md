@@ -53,7 +53,7 @@ OPENAI_API_KEY=your_openai_key
 ### Running the Streamlit Interface
 
 ```bash
-streamlit run streamlit_app.py
+streamlit run run.py
 ```
 
 This will open the web interface where you can:
@@ -64,8 +64,6 @@ This will open the web interface where you can:
 ### Using the Python API
 
 ```python
-from src.main import MarketResearchSystem
-
 # Initialize the system
 system = MarketResearchSystem()
 
@@ -85,17 +83,27 @@ print(results["resources"])
 
 ```
 market_research_system/
-├── docs/
-│   └── architecture.md
 ├── src/
 │   ├── agents/
-│   │   ├── research_agent.py
-│   │   ├── market_agent.py
-│   │   └── resource_agent.py
-│   └── main.py
-├── .env
-├── requirements.txt
-└── streamlit_app.py
+│   │   ├── __init__.py        
+│   │   ├── base.py           # Base agent class with common functionality
+│   │   ├── research_agent.py # Industry analysis agent
+│   │   ├── market_agent.py   # Use case generation agent
+│   │   └── resource_agent.py # Implementation resources agent
+│   ├── utils/
+│   │   ├── __init__.py        
+│   │   ├── web_search.py     # Web search utilities
+│   ├── config/
+│   │   ├── __init__.py        
+│   │   └── constants.py      # System configuration
+│   └── interface/
+│   │   ├── __init__.py        
+│       └── streamlit_app.py   # Web interface
+│── __init__.py
+│── main.py
+│── models.py
+│── run.py  
+
 ```
 
 ## License
@@ -104,6 +112,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- OpenAI GPT-4 for language model capabilities
+- OpenAI GPT-4o-mini for language model capabilities
 - Streamlit for the web interface
 - DuckDuckGo for search capabilities 

@@ -10,17 +10,24 @@ The Market Research System is a multi-agent AI system designed to analyze indust
 market_research_system/
 ├── src/
 │   ├── agents/
+│   │   ├── __init__.py        
 │   │   ├── base.py           # Base agent class with common functionality
 │   │   ├── research_agent.py # Industry analysis agent
 │   │   ├── market_agent.py   # Use case generation agent
 │   │   └── resource_agent.py # Implementation resources agent
 │   ├── utils/
+│   │   ├── __init__.py        
 │   │   ├── web_search.py     # Web search utilities
-│   │   └── cost_tracking.py  # Token and cost tracking
 │   ├── config/
+│   │   ├── __init__.py        
 │   │   └── constants.py      # System configuration
 │   └── interface/
+│   │   ├── __init__.py        
 │       └── streamlit_app.py   # Web interface
+│── __init__.py
+│── main.py
+│── models.py
+│── run.py 
 ```
 
 ## System Flow
